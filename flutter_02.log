@@ -1,0 +1,53 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --target lib/main.dart -d emulator-5554 --dart-define=flutter.inspector.structuredErrors=true --start-paused --web-server-debug-protocol ws --web-server-debug-backend-protocol ws --web-allow-expose-url
+
+## exception
+
+StateError: Bad state: No element
+
+```
+#0      ListMixin.firstWhere (dart:collection/list.dart:167:5)
+#1      DartDevelopmentService.startDartDevelopmentService (package:flutter_tools/src/base/dds.dart:63:32)
+<asynchronous suspension>
+#2      FlutterDevice.connect.<anonymous closure> (package:flutter_tools/src/resident_runner.dart:249:11)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel dev, 1.26.0-1.0.pre, on Linux, locale pt_BR.UTF-8)
+    • Flutter version 1.26.0-1.0.pre at /home/sys12/snap/flutter/common/flutter
+    • Framework revision 63062a6443 (2 weeks ago), 2020-12-13 23:19:13 +0800
+    • Engine revision 4797b06652
+    • Dart version 2.12.0 (build 2.12.0-141.0.dev)
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 29.0.3)
+    • Android SDK at /home/sys12/Android/Sdk
+    • Platform android-30, build-tools 29.0.3
+    • Java binary at: /usr/bin/java
+    • Java version Java(TM) SE Runtime Environment (build 1.8.0_271-b09)
+    • All Android licenses accepted.
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/linux#android-setup for detailed instructions).
+
+[✓] IntelliJ IDEA Community Edition (version 2020.3)
+    • IntelliJ at /snap/intellij-idea-community/267
+    • Flutter plugin version 52.1.5
+    • Dart plugin version 203.5981.152
+
+[✓] VS Code (version 1.52.1)
+    • VS Code at /usr/share/code
+    • Flutter extension version 3.18.0
+
+[✓] Connected device (1 available)
+    • Android SDK built for x86 (mobile) • emulator-5554 • android-x86 • Android 10 (API 29) (emulator)
+
+! Doctor found issues in 1 category.
+```
