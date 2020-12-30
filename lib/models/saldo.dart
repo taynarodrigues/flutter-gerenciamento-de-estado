@@ -1,5 +1,7 @@
 
-class Saldo{
+import 'package:flutter/material.dart';
+
+class Saldo extends ChangeNotifier{
   final double valor;
 
   Saldo(this.valor);
