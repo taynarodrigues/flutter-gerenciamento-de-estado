@@ -1,10 +1,8 @@
 
-import 'package:bytebank/models/saldo.dart';
 import 'package:bytebank/screens/dashboard/saldo.dart';
 import 'package:bytebank/screens/deposito/formulario.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:provider/provider.dart';
 
 class Dashboard extends StatelessWidget{
     Widget build(BuildContext context){
@@ -16,9 +14,7 @@ class Dashboard extends StatelessWidget{
         children:<Widget>[
           Align(alignment: Alignment.topCenter, child: SaldoCard()
       ),
-      Consumer<Saldo>(
-        builder: (context, saldo, child){
-          return RaisedButton(
+          RaisedButton(
         child: Text('Receber Déposito'),
         onPressed: (){
           Navigator.push(
@@ -26,10 +22,7 @@ class Dashboard extends StatelessWidget{
               return FormularioDeposito();
             }));
         },
-      );
-        }
-      )
-      
+      ),
  ]));
     }
 }
