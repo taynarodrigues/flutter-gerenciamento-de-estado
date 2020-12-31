@@ -1,4 +1,4 @@
-#Wed Dec 30 15:04:20 AMT 2020
+#Thu Dec 31 07:34:58 AMT 2020
 base.0=/home/sys12/workspace/flutter-gerenciamento-de-estado/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
